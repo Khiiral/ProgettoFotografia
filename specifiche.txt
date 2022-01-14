@@ -1,0 +1,81 @@
+Caso d'uso UC1: consulta categoria
+-Attore primario: utente
+-Scenario principale di successo:
+	- L'utente consulta le categorie da un apposito menu
+	- L'utente seleziona una categoria
+	- Il sistema mostra le foto contenute in quella categoria
+	- L'utente sceglie una foto e ne richiede i dettagli
+	- Il sistema mostra i dettagli della foto scelta dall'utente
+	- L'utente ripete i passi precedenti un numero indefinito di volte
+-Pre-condizioni: l'utente è identificato e autenticato
+
+Caso d'uso UC2: consulta fotografi
+-Attore primario: utente
+-Scenario principale di successo:
+	- L'utente consulta i fotografi da un apposito menu
+	- L'utente seleziona un fotografo e ne richiede i dettagli
+	- Il sistema mostra i dettagli del fotografo e le foto che ha realizzato
+	- L'utente ripete i passi precedenti un numero indefinito di volte
+-Pre-condizioni: l'utente è identificato e autenticato
+
+Caso d'uso UC3: consulta foto
+-Attore primario: utente
+-Scenario principale di successo:
+	- L'utente consulta le foto da un apposito menu
+	- L'utente seleziona una foto e ne richiede i dettagli
+	- Il sistema mostra i dettagli della foto scelta dall'utente
+	- L'utente ripete i passi precedenti un numero indefinito di volte
+-Pre-condizioni: l'utente è identificato e autenticato
+
+Caso d'uso UC4: inserimento categoria 
+-Attore primario: amministratore
+-Scenario principale di successo:
+	- L'amministratore inserisce una nuova categoria indicandone il nome e gli associa una foto
+	- Il sistema registra la categoria e mostra l'elenco di tutte le categorie
+-Pre-condizioni: l'amministratore è identificato e autenticato
+
+Caso d'uso UC5: inserimento fotografo
+-Attore primario: amministratore
+-Scenario principale di successo:
+	- L'amministratore inserisce un nuovo fotografo specificandone i dettagli e gli associa una foto
+	- Il sistema registra il fotografo e mostra l'elenco di tutti i fotografi
+Pre-condizioni: l'amministratore è identificato e autenticato
+
+Caso d'uso UC6: inserimento foto
+-Attore primario: amministratore
+-Scenario principale di successo:
+	- L'amministratore inserisce una nuova foto specificandone i dettagli e gli associa una foto
+	- Il sistema registra la foto e mostra l'elenco di tutte le foto
+-Pre-condizioni: l'amministratore è identificato e autenticato
+
+Caso d'uso UC7: cancellazione foto
+-Attore primario: amministratore
+-Scenario principale di successo:
+	- L'amministratore consulta le foto da un apposito menu 
+	- L'amministratore sceglie una foto e ne richiede la rimozione
+	- Il sistema registra la cancellazione effettuata e mostra l'elenco di tutte le foto
+-Pre-condizioni: l'amministratore è identificato e autenticato
+
+Caso d'uso UC8: modifica foto
+-Attore primario: amministratore
+-Scenario principale di successo:
+	- L'amministratore consulta le foto da un apposito menu
+	- L'amministratore sceglie una foto e ne richiede la modifica
+	- Il sistema mostra all'amministratore i dati della foto da modificare
+	- L'amministratore modifica i dati della foto scelta
+	- Il sistema registra l'aggiornamento effettuato e mostra l'elenco di tutte le foto
+-Pre-condizioni: l'amministratore è identificato e autenticato
+
+Caso d'uso UC9: modifica fotografo
+-Attore primario: amministratore
+-Scenario principale di successo:
+	- L'amministratore consulta i fotografi da un apposito menu
+	- L'amministratore seleziona un fotografo e ne richiede la modifica
+	- Il sistema mostra all'amministratore i dati del fotografo da modificare
+	- L'amministratore modifica i dati del fotografo selezionato
+	- Il sistema registra l'aggiornamento effettuato e mostra l'elenco di tutti i fotografi
+-Pre-condizioni: l'amministratore è identificato e autenticato
+
+
+
+
