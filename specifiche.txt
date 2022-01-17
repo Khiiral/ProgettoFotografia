@@ -56,3 +56,10 @@ Caso d'uso UC7: cancellazione foto
 	- Il sistema registra la cancellazione effettuata e mostra l'elenco di tutte le foto
 -Pre-condizioni: l'amministratore è identificato e autenticato
 
+Caso d'uso UC8: cancellazione fotografo
+-Attore primario: amministratore
+-Scenario principale di successo:
+	- L'amministratore consulta i fotografi da un apposito menu
+	- L'amministratore sceglie un fotografo e ne richiede la rimozione
+	- Il sistema registra la cancellazione effettuata e mostra l'elenco di tutti i fotografi
+-Pre-condizioni: l'amministratore è identificato e autenticato
