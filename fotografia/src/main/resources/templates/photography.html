@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link th:href="@{/layout/styles/photography.css}" rel="stylesheet">
+	<title>Fotografia - Foto</title>
+</head>
+<body>
+
+<div th:if="${role}=='ADMIN'">
+<header>
+	<a th:href="@{/default}" class="header-brand">Fotografia</a>
+	<nav>
+		<ul class="nav_links">
+			<li><a th:href="@{/default}">Home</a></li>
+			<li>
+			<div class="dropdown">
+				<a class="dropbtn">Inserisci</a>
+				<div class="dropdown-content">
+					<a th:href="@{/admin/category}">Categoria</a>
+					<a th:href="@{/admin/photographer}">Fotografo</a>
+					<a th:href="@{/admin/photography}">Foto</a>
+				</div>
+				</div>
+			</li>
+			<li>
+			<div class="dropdown">
+				<a class="dropbtn">Elenco</a>
+				<div class="dropdown-content">
+					<a th:href="@{/category}">Categorie</a>
+					<a th:href="@{/photographer}">Fotografi</a>
+					<a th:href="@{/photography}">Foto</a>
+				</div>
+				</div>
+			</li>
+		</ul>
+		</nav>
+		<ul class="nav_links2">
+				<li><a th:href="@{/logout}" class="button">Logout</a></li>
+		</ul>
+</header>
+</div>
+
+<div th:unless="${role}=='ADMIN'">
+<header>
+	<a th:href="@{/default}" class="header-brand">Fotografia</a>
+	<nav>
+		<ul class="nav_links">
+			<li><a th:href="@{/default}">Home</a></li>
+			<li>
+			<div class="dropdown">
+				<a class="dropbtn">Elenco</a>
+				<div class="dropdown-content">
+					<a th:href="@{/category}">Categorie</a>
+					<a th:href="@{/photographer}">Fotografi</a>
+					<a th:href="@{/photography}">Foto</a>
+				</div>
+				</div>
+			</li>
+		</ul>
+		</nav>
+		<ul class="nav_links2">
+				<li><a th:href="@{/logout}"class="button">Logout</a></li>
+		</ul>
+</header>
+</div>
+
+<div th:if="${role}=='ADMIN'">
+<div class="benvenuto">
+<p>Admin: <a sec:authentication="name"></a></p>
+</div>
+</div>
+<div th:unless="${role}=='ADMIN'">
+<div class="benvenuto">
+<p>Utente: <a sec:authentication="name"></a></p>
+</div>
+</div>
+
+<div class="contentFigure">
+<div class="centerFigure">
+  <img th:src="@{${photography.photosImagePath}}" alt="" width="700px" height="500px">
+  
+  <div th:if="${photography}" th:object="${photography}">
+  	<table class="centerTable">
+  			<tr>
+				<td><h6>Categoria</h6></td>
+				<td><span class="spanText" th:text="*{category.name}">Categoria foto</span>
+			</tr>
+  	
+			<tr>
+				<td><h6>Titolo</h6></td>
+				<td><span class="spanText" th:text="*{title}">Titolo foto</span>
+			</tr>
+		
+			<tr>
+				<td><h6>Anno</h6></td>
+				<td><span class="spanText" th:text="*{year}">Anno foto</span>
+			</tr>
+			
+			<tr>
+				<td><h6>Luogo</h6></td>
+				<td><span class="spanText" th:text="*{place}">Luogo foto</span>
+			</tr>
+			
+			<tr>
+				<td><h6>Fotografo</h6></td>
+				<td><span class="spanText" th:text="|*{photographer.name} *{photographer.surname}">Fotografo</span>
+			</tr>
+	</table>
+  </div>
+  <div th:unless="${photography}">Non esiste</div>
+ </div>
+</div>
+
+<footer>
+<ul class="footer-links-main">
+	<li><a th:href="@{/default}">Home</a></li>
+	<li><a th:href="@{/category}">Categorie</a></li>
+	<li><a th:href="@{/photographer}">Fotografi</a></li>
+	<li><a th:href="@{/photography}">Foto</a></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<ul class="footer-links-cases">
+	<li>info@gmail.com</li>
+</ul>
+</footer>
+</body>
+</html>

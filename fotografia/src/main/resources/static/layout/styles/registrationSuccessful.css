@@ -1,0 +1,260 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+body{
+	background-image: url(/images/sfondo.jpg);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+	height: 100vh;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+li, a, button{
+	font-family:  poppins;
+	font-weight: 500;
+	font-size:  16px;
+	color:  #111;
+	text-decoration: none;
+}
+
+
+
+
+header{
+	display:  flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+	width: 100%;
+	height: 120px;
+	background-color: #232527;
+	
+}
+
+
+.header-brand{
+	font-family: poppins;
+	font-size: 24px;
+	font-weight: 900;
+	color: #c0c0c0;
+}
+
+.header-brand:hover{
+	color: white;
+}
+
+header nav ul li{
+	display:  inline-block;
+	list-style: none;
+	padding: 0 16px ;
+}
+
+
+button{
+	padding: 15px 20px;
+	border: 1px solid ;
+	cursor: pointer;
+}
+
+header nav ul li a{
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #c0c0c0;
+}
+
+.nav_links2{
+	list-style: none;
+}
+
+ .nav_links2 li {	
+	display: inline-block;
+	padding: 0 16px;
+}
+
+.nav_links2 li a{
+	color: #c0c0c0;
+	text-transform: uppercase;
+}
+
+.nav_links a:hover{
+	color: white;
+}
+
+.nav_links2 a:hover{
+	color: white;
+}
+
+.button{
+	border: 1px solid #06a3b3;
+	color: white;
+	padding: 12px 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 185px;
+	background-color: #06a3b3;
+	border-radius: 30px;
+	font-size: 18px;
+}
+
+
+/* DROPDOWN MENU */
+
+.dropbtn{
+	cursor: pointer;
+}
+
+.dropdown{
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #232527;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	padding-top: 51px;
+}
+
+.dropdown-content a{
+	color: #c0c0c0;
+	padding: 25px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	text-transform: none;
+}
+
+.dropdown-content a:hover{
+	background-color: #333333;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+.successTitle{
+	text-align: center;
+	font-weight: 100;
+	font-size: 25px;
+	color: #111;
+	margin-top: 60px;
+	padding-bottom: 50px;
+}
+
+.main{
+	width: 500px;
+	margin: auto;
+	margin-top: 200px;
+	height: 200px;
+	border: 1px solid #fff;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.contentLogin{
+	width: 100%;
+}
+
+.button2{
+	border: none;
+	color: white;
+	padding: 15px 58px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 40px;
+	margin-top: 10px;
+	background-color: #3366cc;
+}
+
+/* FOOTER */
+
+footer{
+	width: 100%;
+	background-color: #232527;
+	text-align: center;
+	overflow: hidden;
+}
+
+footer ul{
+	margin: 0px;
+	padding: 0px;
+	margin-top: 220px;
+}
+
+footer li {
+	display: inline;
+	list-style: none;
+	color: #c0c0c0;
+	font-size: 24px;
+	line-height: 30px;
+	padding: 45px;
+}
+
+footer li a{
+	font-family: poppins;
+	font-size: 24px;
+	color: #c0c0c0;
+	line-height: 30px;
+}
+
+.footer-links-main a:hover{
+	color: white;
+}
+
+.footer-links-cases{
+	margin-bottom: 40px;
+}
+
+.footer-links-cases li:hover{
+	color: white;
+}
+
+@media only screen and (min-width: 1000px){
+	.footer-links-main{
+		display: inline-block;
+	}
+}

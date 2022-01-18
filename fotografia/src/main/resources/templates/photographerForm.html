@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link th:href="@{/layout/styles/photographerForm.css}" rel="stylesheet">
+	<title>Fotografia - Inserisci fotografo</title>
+</head>
+<body>
+<header>
+	<a th:href="@{/default}" class="header-brand">Fotografia</a>
+	<nav>
+		<ul class="nav_links">
+			<li><a th:href="@{/default}">Home</a></li>
+			
+			<li>
+			<div class="dropdown">
+				<a class="dropbtn">Inserisci</a>
+				<div class="dropdown-content">
+					<a th:href="@{/admin/category}">Categoria</a>
+					<a th:href="@{/admin/photographer}">Fotografo</a>
+					<a th:href="@{/admin/photography}">Foto</a>
+				</div>
+				</div>
+			</li>
+			
+			<li>
+			<div class="dropdown">
+				<a class="dropbtn">Elenco</a>
+				<div class="dropdown-content">
+					<a th:href="@{/category}">Categorie</a>
+					<a th:href="@{/photographer}">Fotografi</a>
+					<a th:href="@{/photography}">Foto</a>
+				</div>
+				</div>
+			</li>
+		</ul>
+		</nav>
+		<ul class="nav_links2">
+				<li><a th:href="@{/logout}"class="button">Logout</a></li>
+		</ul>
+</header>
+<div class="benvenuto">
+<p>Admin: <a sec:authentication="name"></a></p>
+</div>
+
+<section class="contentForm">
+<div class="main">
+		<form th:action="@{/admin/photographer}" method="POST" th:object="${photographer}" enctype="multipart/form-data">
+			<div th:if="${#fields.hasGlobalErrors()}">
+				<p th:each="err : ${#fields.globalErrors()}" th:text="${err}" th:style="'color:red'">...</p>
+			</div>
+			<div class="formTitle">
+				<p>Fotografo</p>
+			</div>
+			
+			<table class="centerTable">
+				<tr>
+					<td>
+					<div class="nameText">
+					<h6>
+						<span>Nome<br><input type="text" class="name" th:field="*{name}" id="photographer" placeholder="Inserisci un nome" required/></span>
+					</h6>
+					</div>
+					<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+					</td>
+					
+					<td>
+					<div class="surnameText">
+					<h6>
+						<span>Cognome<br><input type="text" class="surname" th:field="*{surname}" id="photographer" placeholder="Inserisci un cognome" required/></span>
+					</h6>
+					</div>
+					<span th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></span>
+					</td>
+				</tr>
+					
+				<tr>
+					<td>
+					<div class="nationalityText">
+					<h6>
+						<span>Nazionalità<br><input type="text" class="nationality" th:field="*{nationality}" id="photographer" placeholder="Inserisci la nazionalità" required/></span>
+					</h6>
+					</div>
+					<span th:if="${#fields.hasErrors('nationality')}" th:errors="*{nationality}"></span>
+					</td>
+				
+				
+					<td>
+					<div class="dateOfBirthText">
+					<h6>
+						<span>Data di nascita<br><input type="date" class="dateOfBirth" th:field="*{dateOfBirth}" id="photographer" required/></span>
+					</h6>
+					</div>
+					<span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></span>
+					</td>
+				</tr>
+					
+				<tr>
+					<td>
+					<div class="birthPlaceText">
+					<h6>
+						<span>Luogo di nascita<br><input type="text" class="birthPlace" th:field="*{birthPlace}" id="photographer" placeholder="Inserisci luogo di nascita" required/></span>
+					</h6>
+					</div>
+					<span th:if="${#fields.hasErrors('birthPlace')}" th:errors="*{birthPlace}"></span>
+					</td>
+									
+					<td>
+					<div class="fotoText">
+					<h6>
+						<span>Foto<br><input type="file" class="foto" name="image" accept="image/png, image/jpeg" required/></span>
+					</h6>
+					</div>
+					</td>
+				</tr>
+	</table>
+	<div>
+		<h6><button class="button2" type="submit"><b>Inserisci</b></button></h6>
+		</div>	
+		</form>
+		</div>
+		</section>
+
+<footer>
+<ul class="footer-links-main">
+	<li><a th:href="@{/default}">Home</a></li>
+	<li><a th:href="@{/category}">Categorie</a></li>
+	<li><a th:href="@{/photographer}">Fotografi</a></li>
+	<li><a th:href="@{/photography}">Foto</a></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<ul class="footer-links-cases">
+	<li>info@gmail.com</li>
+</ul>
+</footer>
+</body>
+</html>

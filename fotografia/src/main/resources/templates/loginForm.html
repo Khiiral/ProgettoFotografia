@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link th:href="@{/layout/styles/loginForm.css}" rel="stylesheet">
+	<title>Fotografia - Login</title>
+</head>
+<body>
+
+<!--  
+<header>
+	<a th:href="@{/index}" class="header-brand">Fotografia</a>
+	<nav>
+		<ul class="nav_links">
+			<li><a th:href="@{/index}">Home</a></li>
+			<li>
+			<div class="dropdown">
+				<a class="dropbtn">Elenco</a>
+				<div class="dropdown-content">
+					<a th:href="@{/category}">Categorie</a>
+					<a th:href="@{/photographer}">Fotografi</a>
+					<a th:href="@{/photography}">Foto</a>
+				</div>
+				</div>
+			</li>
+		</ul>
+		</nav>
+		<ul class="nav_links2">
+				<li><a th:href="@{/register}" class="button">Register</a></li>
+				<li><a th:href="@{/login}" class="button">Login</a></li>
+		</ul>
+</header>
+-->
+<section class="contentLogin">
+	<div class="main">
+	<form th:action="@{/login}" method="POST">
+	<div class="loginTitle">
+		<p>Login</p>
+	</div>
+	<div>
+	
+		<div>
+		<div class="usernameText">
+		<h6>Username</h6>
+		</div>
+		<h6><input class="username" type="text" name="username" placeholder="Inserisci il tuo username" required></h6>
+		</div>
+		<br>
+		
+		<div>
+		<div class="passwordText">
+		<h6>Password</h6>
+		</div>
+		<h6><input class="password" type="password" name="password" placeholder="Inserisci la tua password" required></h6>
+		</div>
+		<br>
+		
+		<div>
+		<h6><button class="button2" type="submit">Login</button></h6>
+		</div>
+	</div>
+	</form>
+	<div class="registerLink">
+	<p class="newUserText">Nuovo utente?<a class="otherPage" th:href="@{/register}">Registrati qui</a></p>
+	</div>
+	</div>
+	</section>
+
+<!--  
+<footer>
+<ul class="footer-links-main">
+	<li><a th:href="@{/index}">Home</a></li>
+	<li><a th:href="@{/category}">Categorie</a></li>
+	<li><a th:href="@{/photographer}">Fotografi</a></li>
+	<li><a th:href="@{/photography}">Foto</a></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<ul class="footer-links-cases">
+	<li>info@gmail.com</li>
+</ul>
+</footer>
+-->
+
+</body>
+</html>
