@@ -32,11 +32,11 @@ body {
 }
 
 body{
-	background-image: url(/images/sfondo.jpg);
 	background-repeat: no-repeat;
 	background-size: auto;
 	background-position: center;
 	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/sfondoSito.jpg);
 	
 }
 
@@ -257,7 +257,11 @@ header nav ul li a{
 	cursor: pointer;
 	margin-left: 120px;
 	margin-top: 10px;
-	background-color: #06a3b3;
+	background-color: #2a635c;
+}
+
+.button2:hover{
+	background-color: #357c73;
 }
 
 
@@ -274,12 +278,12 @@ header nav ul li a{
 }
 
 .registerLink a{
-	color: #15acce;
+	color: #4baea1;
 	
 }
 
 .registerLink a:hover{
-	color: #06a3b3;
+	color: #7bc6bc;
 }
 
 /* FOOTER */

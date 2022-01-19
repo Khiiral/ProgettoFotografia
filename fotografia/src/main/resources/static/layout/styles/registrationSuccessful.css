@@ -32,11 +32,11 @@ body {
 }
 
 body{
-	background-image: url(/images/sfondo.jpg);
 	background-repeat: no-repeat;
 	background-size: auto;
 	background-position: center;
 	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(/images/sfondoSito.jpg);
 }
 
 *{
@@ -131,9 +131,13 @@ header nav ul li a{
 	font-size: 16px;
 	cursor: pointer;
 	margin-left: 185px;
-	background-color: #06a3b3;
+	background-color: #2a635c;
 	border-radius: 30px;
 	font-size: 18px;
+}
+
+.button:hover{
+	background-color: #357c73;
 }
 
 
